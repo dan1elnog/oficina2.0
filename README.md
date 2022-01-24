@@ -7,60 +7,81 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Oficina 2.0
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Oficina 2.0 é uma aplicação web desenvolvida com o objetivo de auxiliar oficinas mecâniacas a armazenarem e visualizarem seus orçamentos. A aplicação foi desenvolvida na linguagem de programação PHP e utiliza o framework Laravel, além de contar com um banco de dados (mysql) para guardar todas as informações pertinentes aos orçamentos gerados. 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![tela1](https://user-images.githubusercontent.com/92327887/150830698-bff28078-4bb0-4bea-a32c-7f6fb6f8c837.png)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Como instalar e configurar a aplicação:
 
-## Laravel Sponsors
+- Instale o PHP através do link:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    https://www.php.net/downloads.php#v8.1.2
 
-### Premium Partners
+- Instale o servidor XAMP: 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+    https://www.apachefriends.org/pt_br/download.html
 
-## Contributing
+- Instale o gerenciador de depenências "Composer":  
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    https://getcomposer.org/
 
-## Code of Conduct
+- Instale o Laravel:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    Com o composer instalado entre em um terminal do seu computador e digite o comando: composer global require "laravel/installer"
 
-## Security Vulnerabilities
+- Clone esse repositório dentro do diretório "htdocs" do XAMP:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    https://github.com/dan1elnog/oficina2.0.git
 
-## License
+- Inicialize o Servidor:
+    
+    Abra  o XAMP e inicialize o Apache e Mysql:
+    
+    ![image](https://user-images.githubusercontent.com/92327887/150834386-9000c8d1-d1de-4ae3-b5ed-113c56d6a1e8.png)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+    Selecione o diretório da aplicação em algum terminal do seu computador, e digite o comando "php artisan serve" 
+
+    Deve aparecer uma saída semelhante a essa: 
+
+![image](https://user-images.githubusercontent.com/92327887/150833262-ae1297de-66f5-48b3-b8c3-c9456785c03e.png)
+    
+  Entre no navegador de sua preferência e e digite: localhost:8000/budget. A saída deve ser exatamente essa: 
+  
+ ![image](https://user-images.githubusercontent.com/92327887/150834683-8e7afc62-3d20-4fdc-a73b-ae08db7eb43b.png)
+
+
+## Navegando na Aplicação:
+
+### Cadastro:
+ Clicando em "cadastro" você será direcionado para a tela de cadastro, onde devem ser passadas as informações necessárias para o armazenamento no banco de dados. Vale lembrar que o preenchimento de todos os campos é obrigatório!
+ 
+ ![image](https://user-images.githubusercontent.com/92327887/150835478-a5001bb0-0530-468f-9764-46e317f55d04.png)
+
+## Visualização:
+
+Clicando em "Ver" é possível visualizar os dados de um orçamento específico.
+
+![image](https://user-images.githubusercontent.com/92327887/150835748-64f33ae1-6881-4781-8e71-b32368c7cd27.png)
+
+## Edição:
+É possível atualizar informações de um orçamento, basta clicar em editar e preencher os campos com os valores desejados.
+
+
+## Deleção:
+Para deletar um orçamento basta clicar em "deletar" e você será direcionado para uma página de confirmação, clique em voltar para sair da mesma e retornar a página inicial:
+
+![image](https://user-images.githubusercontent.com/92327887/150836453-96d3990d-53ba-40a8-8e37-a8c35184319d.png)
+
+
+## Informaçôes Extra:
+
+A aplicação utiliza o bootstrap para estilização da página e o arquivo externo:"lucascudo/laravel-pt-br-localization": "^1.1" para traduzir as mensagens de erro.
+
+
+
